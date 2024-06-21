@@ -32,6 +32,14 @@ function SignUpForm() {
         />
         <label htmlFor="username">username</label>
         <input
+          type="username"
+          name="username"
+          value={signupInfo.username}
+          onChange={handleChange}
+        />
+
+        <label htmlFor="password">password</label>
+        <input
           type="password"
           name="password"
           value={signupInfo.password}

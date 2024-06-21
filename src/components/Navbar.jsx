@@ -5,7 +5,7 @@ import { AuthContext } from "../context/auth.context";
 function Navbar() {
   const { user, logout } = useContext(AuthContext);
   return (
-    <nav>
+    <nav className="flex justify-between">
       <div>
         <Link to="/">
           <h1>Terror Trendz ☠</h1>

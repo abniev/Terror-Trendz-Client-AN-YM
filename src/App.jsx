@@ -37,11 +37,10 @@ function App() {
         <Route path="/product/:productId" element={<ProductDetails />} />
         {/* <Route path="/music" element={<MusicList />} /> */}
         <Route path="/about" element={<About />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
 
-        <Route element={<IsNotLoggedIn />}>
-          <Route path="/signup" element={<SignupPage />} />
-          <Route path="/login" element={<LoginPage />} />
-        </Route>
+        <Route element={<IsNotLoggedIn />}></Route>
 
         <Route path="/product/create" element={<CreateProductPage />} />
         {/* <Route path="/music/create" element={<CreateMusicPage />} /> */}
