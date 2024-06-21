@@ -1,7 +1,11 @@
 import React from "react";
 
 function ProductDetailsCard() {
-  return <div></div>;
+  return (
+    <div>
+      <h1>Product Details Card</h1>
+    </div>
+  );
 }
 
 export default ProductDetailsCard;
