@@ -9,8 +9,8 @@ import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import Error from "./pages/Error";
 import CreateProductPage from "./pages/CreateProductPage";
+import MusicPage from "./pages/MusicPage";
 import { Toaster } from "react-hot-toast";
-// import MusicList from "./pages/"
 
 function App() {
   const isLoggedIn = () => {
@@ -35,7 +35,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/product" element={<ProductList />} />
         <Route path="/product/:productId" element={<ProductDetails />} />
-        {/* <Route path="/music" element={<MusicList />} /> */}
+        <Route path="/music" element={<MusicPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />

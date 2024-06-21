@@ -6,11 +6,12 @@ function Navbar() {
   const { user, logout } = useContext(AuthContext);
   return (
     <nav className="flex justify-between">
-      <div>
+      <div className="center gap-4 p-4">
         <Link to="/">
-          <h1>Terror Trendz ☠</h1>
+          <h1 className="text-5xl">Terror Trendz ☠</h1>
         </Link>
         <Link to="/product">Products</Link>
+        <Link to="/music">Music</Link>
         <Link to="/about">About</Link>
       </div>
 
@@ -21,11 +22,11 @@ function Navbar() {
       )}
 
       {user ? (
-        <div>
+        <div className="gap-4 p-4">
           <button onClick={logout}>logout</button>
         </div>
       ) : (
-        <div>
+        <div className="gap-4 p-4">
           <Link to="/signup">sign up</Link>
           <Link to="/login">log in</Link>
         </div>
