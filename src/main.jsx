@@ -8,14 +8,14 @@ import { MusicProvider } from "./context/music.context.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AuthProvider>
         <ProductProvider>
           <MusicProvider>
             <App />
           </MusicProvider>
         </ProductProvider>
-      </BrowserRouter>
-    </AuthProvider>
+      </AuthProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );

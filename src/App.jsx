@@ -9,8 +9,10 @@ import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import Error from "./pages/Error";
 import CreateProductPage from "./pages/CreateProductPage";
-import MusicPage from "./pages/MusicPage";
 import { Toaster } from "react-hot-toast";
+import VideoPage from "./pages/VideoPage";
+import CreateVideoPage from "./pages/VideoPage";
+import Footer from "./components/Footer";
 
 function App() {
   const isLoggedIn = () => {
@@ -27,6 +29,7 @@ function App() {
       <Navigate to="/" />
     );
   };
+
   return (
     <div>
       <Navbar />
@@ -35,17 +38,22 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/product" element={<ProductList />} />
         <Route path="/product/:productId" element={<ProductDetails />} />
-        <Route path="/music" element={<MusicPage />} />
+        <Route path="/music" element={<VideoPage />} />
         <Route path="/about" element={<About />} />
+
+        <Route element={<IsNotLoggedIn />}>
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
-
-        <Route element={<IsNotLoggedIn />}></Route>
+        </Route>
 
         <Route path="/product/create" element={<CreateProductPage />} />
-        {/* <Route path="/music/create" element={<CreateMusicPage />} /> */}
+        <Route path="/music/create" element={<CreateVideoPage />} />
         <Route path="/*" element={<Error />} />
       </Routes>
+      <div> 
+        <Footer />
+        </div> 
+      
     </div>
   );
 }

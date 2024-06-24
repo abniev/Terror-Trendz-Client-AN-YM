@@ -1,7 +1,42 @@
 import React from "react";
+import { useState, useContext } from "react";
+import { AuthContext } from "../context/auth.context";
 
-function Loginform() {
-  return <div> Hey im a div </div>;
+function LoginForm() {
+  const [loginInfo, setLoginInfo] = useState({
+    loginInfo: "",
+    password: "",
+  });
+  const { login } = useContext(AuthContext);
+
+  const handleChange = (e) => {
+    setLoginInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  return (
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        login(loginInfo);
+      }}
+    >
+      <label htmlFor="loginInfo">username / email</label>
+      <input
+        type="text"
+        name="loginInfo"
+        value={loginInfo.loginInfo}
+        onChange={handleChange}
+      />
+      <label htmlFor="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        value={loginInfo.password}
+        onChange={handleChange}
+      />
+      <button type="submit">log in</button>
+    </form>
+  );
 }
 
-export default Loginform;
+export default LoginForm;

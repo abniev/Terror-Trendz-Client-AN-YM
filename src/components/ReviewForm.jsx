@@ -1,10 +1,71 @@
 import React from "react";
+import api from "../services/api";
+import { useContext, useEffect, useState } from "react";
+import { ProductContext } from "../context/product.context";
+import toast from "react-hot-toast";
+import StarRatings from "react-star-ratings";
+import { useParams } from "react-router-dom";
 
 function ReviewForm() {
+  const [review, setReview] = useState({ title: "", rating: 0, review: "" });
+  const { productId } = useParams();
+  const { getAllProducts } = useContext(ProductContext);
+  const handleChange = (e) => {
+    setReview((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await api.post("/review/" + productId, review);
+
+      if (response.status === 200 || response.status === 201) {
+        toast.success("Your review submitted sucessfully");
+        getAllCoffees();
+        setReview({ title: "", rating: 0, review: "" });
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("error creating review");
+    }
+  };
+
+  useEffect(() => {
+    console.log(review);
+  }, [review]);
+
   return (
-    <div>
-      <h1>Review Form</h1>
-    </div>
+    <form className="center flex-col" onSubmit={handleSubmit}>
+      <label htmlFor="title">title:</label>
+      <input
+        type="text"
+        name="title"
+        onChange={handleChange}
+        value={review.title}
+      />
+      <label htmlFor="review">review:</label>
+      <input
+        type="text"
+        name="review"
+        onChange={handleChange}
+        value={review.review}
+      />
+      <label htmlFor="rating">rating:</label>
+      <StarRatings
+        numberOfStars={5}
+        changeRating={(rating) =>
+          setReview((prev) => ({ ...prev, rating: rating }))
+        }
+        name="rating"
+        rating={review.rating}
+        isAggregateRating={true}
+        starRatedColor="rgb(154 52 18)"
+        starHoverColor="rgb(152 55 11)"
+      />
+      <button type="submit" className="btn">
+        review!
+      </button>
+    </form>
   );
 }
 

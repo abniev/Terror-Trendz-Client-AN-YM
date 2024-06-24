@@ -5,3 +5,27 @@
 nav > * {
     @apply text-black;
 }
+
+/* body {
+  @apply bg-grey;
+} */
+
+.links {
+  @apply hover:scale-125 hover:text-black transition-all ease-in-out;
+}
+
+.container {
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 1em;
+    margin: 0 auto;
+  }
+  
+  .title {
+    text-align: center;
+    margin: 2em 0;
+  }
+
+  /* .btn {
+    @apply p-2 border-2 rounded-lg font-semibold border-black text-center hover: bg-black transtion-all;
+  } */

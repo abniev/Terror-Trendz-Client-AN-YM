@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import api from "../services/api";
 
 const AuthContext = createContext();
@@ -7,12 +7,13 @@ const AuthContext = createContext();
 function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const login = async (body) => {
     try {
       let response;
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
       if (emailRegex.test(body.loginInfo)) {
         response = await api.post("/user/login", {
           password: body.password,

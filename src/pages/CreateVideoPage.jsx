@@ -1,21 +1,20 @@
-import React from "react";
-import { useEffect, useContext } from "react";
-import CreateForm from "../components/CreateForm";
+import React, { useContext, useEffect } from "react";
+import CreateVideoForm from "../components/CreateVideoForm";
 import { AuthContext } from "../context/auth.context";
 import { useNavigate } from "react-router-dom";
 
-function CreateProductPage() {
+function CreateVideoPage() {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
-
   useEffect(() => {
     user && user.isAdmin ? null : navigate("/");
   }, [user]);
+
   return (
     <div>
-      <CreateForm />
+      <CreateVideoForm />
     </div>
   );
 }
 
-export default CreateProductPage;
+export default CreateVideoPage;

@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 const ProductContext = createContext();
 
 function ProductProvider({ children }) {
-  const [Products, setProducts] = useState(null);
+  const [products, setProducts] = useState(null);
   const navigate = useNavigate();
 
   const getAllProducts = async () => {
@@ -73,7 +73,7 @@ function ProductProvider({ children }) {
   return (
     <ProductContext.Provider
       value={{
-        Products,
+        products,
         createProduct,
         updateProduct,
         deleteProduct,
