@@ -18,18 +18,20 @@ function ProductDetails() {
   }, [products, productId]);
 
   return (
-    <div className="flex-wrap justify-content">
-      <h1>Product Details</h1>
+    <div>
+      <h1 className="text-3xl ml-20">Product Details</h1>
       {product ? (
         <ProductDetailsCard product={product} />
       ) : (
         <p>Loading ...😈</p>
       )}
       {!user || user.isAdmin ? (
-        <p>
-          <Link to="/login">Login</Link>
-          {""} to Review
-        </p>
+        <button
+          type="button"
+          className="text-white bg-black hover:bg-black focus:ring-4 focus:ring-black font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-black dark:hover:bg-black focus:outline-none dark:focus:ring-black ml-20"
+        >
+          <Link to="/login">Login to review</Link>
+        </button>
       ) : (
         <ReviewForm />
       )}
@@ -39,7 +41,7 @@ function ProductDetails() {
           <ReviewCard review={review} user={user} />
         ))
       ) : (
-        <p>No reviews yet</p>
+        <p className="max-w-md mx-auto mt-5">No reviews yet</p>
       )}
     </div>
   );

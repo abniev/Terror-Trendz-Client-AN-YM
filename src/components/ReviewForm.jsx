@@ -1,4 +1,3 @@
-import React from "react";
 import api from "../services/api";
 import { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../context/product.context";
@@ -21,7 +20,7 @@ function ReviewForm() {
 
       if (response.status === 200 || response.status === 201) {
         toast.success("Your review submitted sucessfully");
-        getAllCoffees();
+        getAllProducts();
         setReview({ title: "", rating: 0, review: "" });
       }
     } catch (error) {
@@ -35,35 +34,49 @@ function ReviewForm() {
   }, [review]);
 
   return (
-    <form className="center flex-col" onSubmit={handleSubmit}>
-      <label htmlFor="title">title:</label>
-      <input
-        type="text"
-        name="title"
-        onChange={handleChange}
-        value={review.title}
-      />
-      <label htmlFor="review">review:</label>
-      <input
-        type="text"
-        name="review"
-        onChange={handleChange}
-        value={review.review}
-      />
-      <label htmlFor="rating">rating:</label>
-      <StarRatings
-        numberOfStars={5}
-        changeRating={(rating) =>
-          setReview((prev) => ({ ...prev, rating: rating }))
-        }
-        name="rating"
-        rating={review.rating}
-        isAggregateRating={true}
-        starRatedColor="rgb(154 52 18)"
-        starHoverColor="rgb(152 55 11)"
-      />
-      <button type="submit" className="btn">
-        review!
+    <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
+      <div className="relative z-0 w-full mb-5 group">
+        {" "}
+        <label htmlFor="title">Title:</label>
+        <input
+          type="text"
+          name="title"
+          onChange={handleChange}
+          value={review.title}
+          className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+        />
+      </div>
+      <div>
+        {" "}
+        <label htmlFor="review">Review:</label>
+        <input
+          type="text"
+          name="review"
+          onChange={handleChange}
+          value={review.review}
+          className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+        />
+      </div>
+      <div>
+        <label htmlFor="rating">Rating:</label>
+        <StarRatings
+          numberOfStars={5}
+          changeRating={(rating) =>
+            setReview((prev) => ({ ...prev, rating: rating }))
+          }
+          name="rating"
+          rating={review.rating}
+          isAggregateRating={true}
+          starRatedColor="#888888"
+          starHoverColor="#eab308"
+          className="mt-10 block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+        />
+      </div>
+      <button
+        type="submit"
+        className="mt-10 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-gray-600 focus:ring-4 focus:outline-yellow-500 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-yellow-800"
+      >
+        Submit Review
       </button>
     </form>
   );

@@ -6,7 +6,7 @@ function ProductList() {
   const { products } = useContext(ProductContext);
 
   return (
-    <div className="flex-wrap justify-content">
+    <div className="flex flex-wrap p-5 m-5 gap-10">
       {products ? (
         products.map((product) => <ProductCard {...product} />)
       ) : (

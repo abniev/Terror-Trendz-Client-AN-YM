@@ -42,18 +42,17 @@ function App() {
         <Route path="/about" element={<About />} />
 
         <Route element={<IsNotLoggedIn />}>
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Route>
 
         <Route path="/product/create" element={<CreateProductPage />} />
         <Route path="/music/create" element={<CreateVideoPage />} />
         <Route path="/*" element={<Error />} />
       </Routes>
-      <div> 
+      <div>
         <Footer />
-        </div> 
-      
+      </div>
     </div>
   );
 }

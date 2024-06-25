@@ -4,9 +4,9 @@ function Homepage() {
   return (
     <div>
       <h1>Homepage</h1>
-      {/* <Footer /> */}
     </div>
   );
+  <div className="bg-repeat" style="500px"></div>;
 }
 
 export default Homepage;
