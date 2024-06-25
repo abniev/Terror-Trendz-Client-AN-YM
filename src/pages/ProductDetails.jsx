@@ -18,8 +18,7 @@ function ProductDetails() {
   }, [products, productId]);
 
   return (
-    <div>
-      <h1 className="text-3xl ml-20">Product Details</h1>
+    <div className="flex-wrap space-x-5">
       {product ? (
         <ProductDetailsCard product={product} />
       ) : (
@@ -28,7 +27,7 @@ function ProductDetails() {
       {!user || user.isAdmin ? (
         <button
           type="button"
-          className="text-white bg-black hover:bg-black focus:ring-4 focus:ring-black font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-black dark:hover:bg-black focus:outline-none dark:focus:ring-black ml-20"
+          className="mt-5 text-white bg-black hover:bg-gray-200 hover:text-black border border-black focus:ring-4 focus:outline-none focus:ring-yellow-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-black dark:hover:bg-black dark:focus:ring-black"
         >
           <Link to="/login">Login to review</Link>
         </button>
@@ -41,7 +40,7 @@ function ProductDetails() {
           <ReviewCard review={review} user={user} />
         ))
       ) : (
-        <p className="max-w-md mx-auto mt-5">No reviews yet</p>
+        <p className="max-w-md mx-auto mt-5 mb-5">No reviews yet</p>
       )}
     </div>
   );
