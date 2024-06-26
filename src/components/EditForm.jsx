@@ -26,7 +26,7 @@ function EditForm({ toggleEdit, setToggleEdit }) {
       >
         <label htmlFor="name">Name</label>
         <input
-          className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-yellow-400 focus:outline-none focus:ring-0 focus:border-yellow-400 peer"
           type="text"
           name="name"
           onChange={handleChange}
@@ -34,7 +34,7 @@ function EditForm({ toggleEdit, setToggleEdit }) {
         ></input>
         <label htmlFor="description">Description</label>
         <input
-          className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-yellow-400 focus:outline-none focus:ring-0 focus:border-yellow-400 peer"
           type="text"
           name="description"
           onChange={handleChange}
@@ -42,7 +42,7 @@ function EditForm({ toggleEdit, setToggleEdit }) {
         ></input>
         <label htmlFor="price">Price</label>
         <input
-          className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-yellow-400 focus:outline-none focus:ring-0 focus:border-yellow-400 peer"
           type="number"
           name="price"
           onChange={handleChange}
@@ -50,7 +50,7 @@ function EditForm({ toggleEdit, setToggleEdit }) {
         />
         <label htmlFor="quantity">Quantity</label>
         <input
-          className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-yellow-400 focus:outline-none focus:ring-0 focus:border-yellow-400 peer"
           type="number"
           name="quantity"
           onChange={handleChange}
@@ -58,7 +58,7 @@ function EditForm({ toggleEdit, setToggleEdit }) {
         />
         <label htmlFor="image">Image</label>
         <input
-          className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-yellow-400 focus:outline-none focus:ring-0 focus:border-yellow-400 peer"
           type="text"
           name="image"
           onChange={handleChange}
@@ -68,7 +68,7 @@ function EditForm({ toggleEdit, setToggleEdit }) {
           type="submit"
           className="mt-5 text-white bg-black hover:bg-gray-200 hover:text-black border border-black focus:ring-4 focus:outline-none focus:ring-yellow-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-black dark:hover:bg-black dark:focus:ring-black"
         >
-          Edit
+          Save
         </button>
       </form>
     )

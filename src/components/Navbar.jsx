@@ -5,9 +5,9 @@ import { AuthContext } from "../context/auth.context";
 function Navbar() {
   const { user, logout } = useContext(AuthContext);
   return (
-    <nav className="bg-yellow-400 border-gray-200 dark:bg-gray-900 flex flex-wrap justify-between items-center pt-4 px-4 pb-5 mb-5">
+    <nav className="font-sophisto text-2xl bg-yellow-400 border-gray-200 dark:bg-gray-900 flex flex-wrap justify-between items-center pt-4 px-4 pb-5 mb-5">
       <div>
-        <Link to="/">
+        <Link className="mx-5" to="/">
           <img
             src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/Nav-Terror-Logo_nmhanx.png"
             alt="logo"
@@ -85,7 +85,7 @@ function Navbar() {
             </Link>
             <Link
               type="button"
-              className="mr-10 flex gap-2 p-4 text-black border border-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+              className="font-sophisto mr-10 flex gap-2 p-4 text-black border border-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
               to="/login"
             >
               Log in

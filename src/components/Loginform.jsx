@@ -15,15 +15,15 @@ function LoginForm() {
 
   return (
     <form
-      className="max-w-lg mx-auto p-5 m-5 rounded-lg"
+      className="font-sophisto max-w-lg mx-auto p-5 m-5 rounded-lg"
       onSubmit={(e) => {
         e.preventDefault();
         login(loginInfo);
       }}
     >
-      <label htmlFor="loginInfo">username / email</label>
+      <label htmlFor="loginInfo">Username / Email</label>
       <input
-        className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+        className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-yellow-400 focus:outline-none focus:ring-0 focus:border-yellow-400 peer"
         type="text"
         name="loginInfo"
         value={loginInfo.loginInfo}
@@ -31,7 +31,7 @@ function LoginForm() {
       />
       <label htmlFor="password">Password</label>
       <input
-        className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+        className="w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-900 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-yellow-400 focus:outline-none focus:ring-0 focus:border-yellow-400 peer"
         type="password"
         name="password"
         value={loginInfo.password}

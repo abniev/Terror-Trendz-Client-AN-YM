@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import EditForm from "./EditForm";
 import { ProductContext } from "../context/product.context";
 import { AuthContext } from "../context/auth.context";
+import GenerateScoreLabel from "../assets/lib/generateScoreLabel";
 
 function ProductDetailsCard({ product }) {
   const [toggleEdit, setToggleEdit] = useState(false);
@@ -9,7 +10,7 @@ function ProductDetailsCard({ product }) {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="bg-gray-100 border border-black rounded-lg shadow md:flex-row md:max-w-xl m-10 md: mx-10">
+    <div className="font-sophisto bg-gray-100 border border-black rounded-lg shadow md:flex-row md:max-w-xl m-10 md: mx-10">
       <img className="object-cover rounded-t-lg" src={product.image}></img>
       <div className="ml-5 p-4 leading-normal">
         <h1 className="flex-wrap mb-2 text-4xl font-bold text-gray-900 dark:text-white">
@@ -22,7 +23,7 @@ function ProductDetailsCard({ product }) {
           <span className="text-3xl font-bold text-gray-900 dark:text-white">
             ${product.price} <br />
           </span>
-          Qty: {product.quantity} <br />
+          Qty: <GenerateScoreLabel quantity={product.quantity} />
         </p>
         {user && user.isAdmin && (
           <div>

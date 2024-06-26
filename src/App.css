@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/vla4nqs.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,9 +8,7 @@ nav > * {
     @apply text-black;
 }
 
-/* body {
-  @apply bg-grey;
-} */
+
 
 .links {
   @apply hover:scale-125 hover:text-black transition-all ease-in-out;
@@ -26,10 +26,38 @@ nav > * {
     margin: 2em 0;
   }
 
-  /* .btn {
-    @apply p-2 border-2 rounded-lg font-semibold border-black text-center hover: bg-black transtion-all;
-  } */
 
-  .bg {
-    
+
+  body { 
+    background-image: url("https://res.cloudinary.com/dzwbcfmbe/image/upload/v1719434896/BG_1_1_d2hftv.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
   }
+
+span.green,
+span.red,
+span.black {
+  display: inline-block;
+  padding: 3px 10px;
+  width: auto;
+  border-radius: 3px;
+  color: white;
+}
+
+.green {
+  background: green;
+}
+
+.red {
+  background: red;
+}
+
+.black {
+  background: black;
+}
+
+
+.font-sophisto {
+  font-family: sophisto, sans-serif;
+}

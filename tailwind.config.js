@@ -3,7 +3,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: true,
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Sophisto: ["Sophisto", "sans-serif"],
+      },
+      extend: {},
+    },
   },
   plugins: [require("flowbite/plugin")],
 };

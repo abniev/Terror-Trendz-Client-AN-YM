@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer class="bg-yellow-400 border-gray-200 dark:bg-gray-900">
+    <footer class="md:flex md:justify-between md:items-center font-sophisto bg-yellow-400 border-gray-200 dark:bg-gray-900 bottom-0 left-0 z-20 w-full">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
@@ -47,7 +47,7 @@ function Footer() {
               <ul class="text-gray-700 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                   <a href="https://github.com/abniev" class="hover:underline ">
-                    Github Abner
+                    GitHub Abner
                   </a>
                 </li>
                 <li>
@@ -55,7 +55,7 @@ function Footer() {
                     href="https://github.com/Yrivera2822"
                     class="hover:underline"
                   >
-                    Github Yamil
+                    GitHub Yamil
                   </a>
                 </li>
               </ul>
@@ -186,66 +186,3 @@ function Footer() {
   );
 }
 export default Footer;
-
-// function Footer() {
-//   return (
-//     <footer className="bg-warning dark:bg-black">
-//       {/* <div className='footer-top'>
-//           <p>JOIN THE TERROR CLUB NOW</p>
-//         </div> */}
-
-//       <img
-//         src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/arcade-fast-game-over_w8nqdr.gif"
-//         className="img-fluid md:flex md:justify-between"
-//         alt="F-img"
-//       />
-
-//       <div
-//         className="footer-content "
-//         style={{ height: "70px", color: "#4b0082" }}
-//       >
-//         <h3>Contact us:</h3>
-//         <p>Email: Terrorfriends@gmail.com</p>
-//         <p>Phone: 723-780-3903</p>
-//         <p>1601 Apt #201 Ave Fernandez Juncos San Juan PR.</p>
-//       </div>
-
-//       <div className="footer-content">
-//         <h3 className="follow-us" style={{ color: "#4b0082" }}>
-//           Follow Us:
-//         </h3>
-//         <ul className="social-media d-flex">
-//           <Link to="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="blank">
-//             <img
-//               src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/logo-black_nvbkev.png"
-//               className="T-logo"
-//               alt="T-img"
-//             />
-//           </Link>
-
-//           <Link to="https://www.instagram.com/terror.trendz/" target="_blank">
-//             <img
-//               src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/Instagram_Glyph_Black_rjzxcn.png"
-//               className="T-logo"
-//               alt="T-img"
-//             />
-//           </Link>
-
-//           <Link
-//             to="https://www.facebook.com/people/Terror-Trendz/100088390365188/"
-//             target="blank"
-//             alt="T-img"
-//           >
-//             <img
-//               src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717702955/Facebook_Logo_Secondary_eib83f.png"
-//               className="T-logo"
-//               alt="T-img"
-//             />
-//           </Link>
-//         </ul>
-//       </div>
-//     </footer>
-//   );
-// }
-
-// export default Footer;
