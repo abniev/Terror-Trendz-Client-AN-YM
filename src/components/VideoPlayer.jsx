@@ -14,14 +14,7 @@ function VideoPlayer() {
   return (
     <div className="w-full h-auto max-w-full bg-gray-100 border border-black rounded-lg dark:border-gray-700 mb-5">
       {videoList && (
-        <ReactPlayer
-          url={videoList.videoUrl}
-          controls="true"
-          muted
-          playing
-          playIcon=""
-          light=""
-        />
+        <ReactPlayer url={videoList.videoUrl} controls muted playing playIcon />
       )}
       <CreateVideoForm />
 
