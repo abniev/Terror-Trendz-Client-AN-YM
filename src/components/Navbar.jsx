@@ -98,7 +98,7 @@ function Navbar() {
                 </button>
               </div>
             ) : (
-              <div className="flex flex-row">
+              <div className="flex flex-row inline-flex">
                 <Link
                   type="button"
                   className="m-8 block flex flex-wrap gap-2 p-4 text-white bg-green-500 hover:bg-black hover:text-white hover:border border-black focus:outline-none focus:ring-2 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
