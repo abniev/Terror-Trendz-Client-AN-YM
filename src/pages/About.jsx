@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div className="h-[1500px]">
+    <div className="h-[900px]">
       <div className="font-sophisto flex flex-wrap justify-center   ">
         <div className="text-2xl font-bold tracking-tight text-gray-50 dark:text-white m-5 pb-5 max-w-sm bg-gray-900 border border-black rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <img

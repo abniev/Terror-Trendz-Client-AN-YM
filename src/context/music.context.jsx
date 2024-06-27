@@ -55,8 +55,6 @@ function MusicProvider({ children }) {
         if (response.status === 200) {
           toast.success("Song deleted successfully");
           getAllMusic();
-
-          navigate(-1);
         }
       }
     } catch (error) {

@@ -5,8 +5,8 @@ import { AuthContext } from "../context/auth.context";
 function Navbar() {
   const { user, logout } = useContext(AuthContext);
   return (
-    <nav className="font-sophisto text-2xl bg-yellow-400 border-gray-200 dark:bg-gray-900 ">
-      <div className="max-w-screen-xl flex flex-wrap justify-between items-center pt-4 px-4 pb-2 mb-5 mx-auto">
+    <nav className="font-sophisto text-2xl bg-yellow-400 border-gray-200 dark:bg-gray-900 flex flex-row ">
+      <div className="max-w-screen-xl flex flex-wrap self-center pt-4 px-4 pb-2 mb-5 mx-auto">
         <Link className="mx-5 space-x-3 rtl:space-x-reverse" to="/">
           <img
             src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/Nav-Terror-Logo_nmhanx.png"
@@ -39,7 +39,7 @@ function Navbar() {
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <div className="flex md:order-2 space-x-3 md:space-x-0 ">
             <div className="flex flex-wrap">
               <Link
                 className="block m-5 p-5 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
@@ -63,10 +63,10 @@ function Navbar() {
             </div>
 
             {user && user.isAdmin && (
-              <div>
+              <div className="flex flex-row">
                 <Link
                   type="button"
-                  className="m-8 block flex flex-wrap text-white bg-gray-800 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                  className="self-center p-2 px-3 m-3 bg-gray-900 text-white border border-transparent border rounded-lg hover:bg-green-500 text-base flex flex-row gap-2"
                   to="/product/create"
                 >
                   Add a product
@@ -89,19 +89,20 @@ function Navbar() {
               </div>
             )}
             {user ? (
-              <div type="button">
+              <div className="flex flex-row">
                 <button
-                  className="m-8 text-white bg-gray-800 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-500 dark:focus:ring-gray-700 dark:border-gray-700"
+                  type="button"
+                  className="self-center p-2 px-3 m-2 rounded-lg hover:bg-red-700 hover:text-white text-base flex flex-wrap gap-2"
                   onClick={logout}
                 >
                   Logout
                 </button>
               </div>
             ) : (
-              <div className="flex flex-row inline-flex">
+              <div className="flex flex-row">
                 <Link
                   type="button"
-                  className="m-8 block flex flex-wrap gap-2 p-4 text-white bg-green-500 hover:bg-black hover:text-white hover:border border-black focus:outline-none focus:ring-2 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                  className="self-center p-2 m-2 bg-gray-900 text-white border border-transparent border rounded-lg hover:bg-green-500 text-base flex flex-row gap-2"
                   to="/signup"
                 >
                   Sign up
@@ -123,7 +124,7 @@ function Navbar() {
                 </Link>
                 <Link
                   type="button"
-                  className="m-8 block flex flex-wrap font-sophisto flex gap-2 p-4 text-black border border-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                  className="self-center p-2 m-2 border border-black rounded-lg hover:bg-black hover:text-white text-base flex flex-row gap-2"
                   to="/login"
                 >
                   Log in
