@@ -26,7 +26,7 @@ function Footer() {
                 Contacts
               </h2>
 
-              <ul class="text-gray-700 dark:text-gray-400 font-medium">
+              <ul class="text-gray-700 dark:text-green-500 font-medium">
                 <li class="mb-4">
                   <a class="hover:underline">Terrorfriends@gmail.com</a>
                 </li>
@@ -155,7 +155,7 @@ function Footer() {
               <span class="sr-only">Twitter page</span>
             </a>
             <a
-              href="#"
+              href="https://github.com"
               class="text-black hover:text-gray-700 dark:hover:text-white ms-5"
             >
               <svg
@@ -174,7 +174,7 @@ function Footer() {
               <span class="sr-only">GitHub account</span>
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/terror.trendz/"
               class="text-gray-700 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <span class="sr-only">Instagram Account</span>

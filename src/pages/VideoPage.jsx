@@ -3,10 +3,8 @@ import VideoPlayer from "../components/VideoPlayer";
 
 function CreateVideoPage() {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center shadow w-full shadow-lg">
       <main className="main">
-        <div className="container"></div>
-
         <div className="container">
           <VideoPlayer />
         </div>

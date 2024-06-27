@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../context/product.context";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 import { Link } from "react-router-dom";
 import ProductDetailsCard from "../components/ProductDetailsCard";
@@ -12,6 +12,7 @@ function ProductDetails() {
   const { products } = useContext(ProductContext);
   const { productId } = useParams();
   const { user } = useContext(AuthContext);
+  const { navigate } = useNavigate();
 
   useEffect(() => {
     products && setProduct(products.find((curr) => curr._id === productId));

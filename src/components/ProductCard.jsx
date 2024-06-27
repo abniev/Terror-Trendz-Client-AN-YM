@@ -10,11 +10,14 @@ function ProductCard({
   _id,
 }) {
   return (
-    <div className="font-sophisto max-w-sm bg-gray-900 border border-black rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div
+      key={_id}
+      className="font-sophisto max-w-sm bg-gray-900 border border-black rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 shadow-md"
+    >
       <img className="rounded-t-lg" src={image} alt="" />
 
       <div className="p-5">
-        <h5 className="mb-2 text-3xl font-bold tracking-tight text-gray-50 dark:text-white">
+        <h5 className="mb-2 text-3xl font-bold tracking-tight text-gray-50 dark:text-gray-50">
           {name}
         </h5>
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-50 dark:text-white">
@@ -22,7 +25,7 @@ function ProductCard({
         </h5>
 
         <Link
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white border border-white rounded-lg hover:bg-yellow-400 hover:text-black focus:ring-4 focus:outline-gray-500 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white border border-green-500 rounded-lg hover:bg-green-600 hover:text-white focus:ring-4 focus:outline-gray-500 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
           to={`/product/${_id}`}
         >
           See Details

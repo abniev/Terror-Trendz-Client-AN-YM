@@ -2,7 +2,7 @@ import LoginForm from "../components/LoginForm";
 
 function LoginPage() {
   return (
-    <div>
+    <div className="h-[1500px]">
       <LoginForm />
     </div>
   );

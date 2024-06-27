@@ -14,7 +14,7 @@ function CreateVideoForm() {
   };
   return (
     <form
-      className="font-sophisto max-w-lg mx-auto p-5 m-5 rounded-lg"
+      className="font-sophisto mx-auto p-5 m-5 rounded-lg"
       onSubmit={(e) => {
         e.preventDefault();
         createMusic(videoInfo);
