@@ -65,7 +65,6 @@ function VideoPlayer() {
               {user && user.isAdmin && (
                 <button
                   className="mt-2 px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-700 focus:ring-4 focus:outline-yellow-400 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-yellow-400"
-                  type="submit"
                   onClick={() => deleteMusic(music._id)}
                 >
                   Delete Video
