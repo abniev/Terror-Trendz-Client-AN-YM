@@ -13,10 +13,7 @@ function About() {
           />
           <div className="card-body m-5">
             <h1 className="text-4xl">Yamil Rivera</h1>
-            <Link
-              to="https://www.instagram.com/yamil.rivera4264/"
-              target="_blank"
-            >
+            <Link to="https://www.instagram.com/mailmanlegs/" target="_blank">
               <h3 className="text-2xl">@mailmanlegs</h3>
             </Link>
             <p className="text-base">Born: Puerto Rico</p>

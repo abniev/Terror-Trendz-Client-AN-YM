@@ -63,10 +63,10 @@ function Navbar() {
             </div>
 
             {user && user.isAdmin && (
-              <div className="flex flex-wrap">
+              <div>
                 <Link
                   type="button"
-                  className="block flex flex-wrap text-white bg-gray-800 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                  className="m-8 block flex flex-wrap text-white bg-gray-800 hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
                   to="/product/create"
                 >
                   Add a product
@@ -89,17 +89,19 @@ function Navbar() {
               </div>
             )}
             {user ? (
-              <div
-                type="button"
-                className="text-white bg-gray-800 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-500 dark:focus:ring-gray-700 dark:border-gray-700"
-              >
-                <button onClick={logout}>Logout</button>
+              <div type="button">
+                <button
+                  className="m-8 text-white bg-gray-800 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-500 dark:focus:ring-gray-700 dark:border-gray-700"
+                  onClick={logout}
+                >
+                  Logout
+                </button>
               </div>
             ) : (
               <div>
                 <Link
                   type="button"
-                  className="block mr-10 flex flex-wrap gap-2 p-4 text-white bg-green-500 hover:bg-black hover:text-white hover:border border-black focus:outline-none focus:ring-2 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                  className="m-8 block flex flex-wrap gap-2 p-4 text-white bg-green-500 hover:bg-black hover:text-white hover:border border-black focus:outline-none focus:ring-2 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
                   to="/signup"
                 >
                   Sign up
@@ -119,30 +121,32 @@ function Navbar() {
                     />
                   </svg>
                 </Link>
-                <Link
-                  type="button"
-                  className="block flex flex-wrap font-sophisto mr-10 flex gap-2 p-4 text-black border border-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-                  to="/login"
-                >
-                  Log in
-                  <svg
-                    className="rtl:rotate-180 w-3.5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </Link>
               </div>
             )}
+            <div>
+              <Link
+                type="button"
+                className="m-8 block flex flex-wrap font-sophisto flex gap-2 p-4 text-black border border-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                to="/login"
+              >
+                Log in
+                <svg
+                  className="rtl:rotate-180 w-3.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
