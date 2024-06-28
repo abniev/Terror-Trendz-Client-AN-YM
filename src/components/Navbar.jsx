@@ -6,7 +6,7 @@ function Navbar() {
   const { user, logout } = useContext(AuthContext);
   return (
     <nav className="font-sophisto text-2xl bg-yellow-400 border-gray-200 dark:bg-gray-900 flex flex-row ">
-      <div className="max-w-screen-xl flex flex-wrap self-center pt-4 px-4 pb-2 mb-1 mx-auto">
+      <div className="max-w-screen-xl flex flex-wrap self-center pt-4 px-4 pb-2 mx-auto">
         <Link className="mx-5 space-x-3 rtl:space-x-reverse" to="/">
           <img
             src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/Nav-Terror-Logo_nmhanx.png"
@@ -39,24 +39,24 @@ function Navbar() {
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <div className="flex md:order-2 space-x-3 md:space-x-0 ">
-            <div className="flex flex-wrap">
+          <div className="flex md:order-2 space-x-3 md:space-x-0">
+            <div className="flex flex-row">
               <Link
-                className="block m-5 p-5 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block p-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page"
                 to="/product"
               >
                 Products
               </Link>
               <Link
-                className="block m-5 p-5 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block p-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
                 to="/music"
                 aria-current="page"
               >
                 Music
               </Link>
               <Link
-                className="block m-5 p-5 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block p-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
                 to="/about"
               >
                 About

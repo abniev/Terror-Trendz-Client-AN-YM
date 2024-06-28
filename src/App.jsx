@@ -13,7 +13,7 @@ import { Toaster } from "react-hot-toast";
 import VideoPage from "./pages/VideoPage";
 import CreateVideoPage from "./pages/VideoPage";
 import Footer from "./components/Footer";
-
+import "flowbite";
 function App() {
   const isLoggedIn = () => {
     return localStorage.getItem("authToken") ? (
