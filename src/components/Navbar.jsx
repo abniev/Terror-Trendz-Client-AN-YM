@@ -6,8 +6,8 @@ function Navbar() {
   const { user, logout } = useContext(AuthContext);
   return (
     <nav className="font-sophisto text-2xl bg-yellow-400 border-gray-200 dark:bg-gray-900 flex flex-row ">
-      <div className="max-w-screen-xl flex flex-wrap self-center pt-4 px-4 pb-2 mx-auto">
-        <Link className="mx-5 space-x-3 rtl:space-x-reverse" to="/">
+      <div className="max-w-screen-xl flex flex-wrap self-center pt-2 pb-2 mx-auto">
+        <Link className="mx-2" to="/">
           <img
             src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/Nav-Terror-Logo_nmhanx.png"
             alt="logo"
