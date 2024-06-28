@@ -6,7 +6,7 @@ function Navbar() {
   const { user, logout } = useContext(AuthContext);
   return (
     <nav className="font-sophisto text-2xl bg-yellow-400 border-gray-200 dark:bg-gray-900 flex flex-row ">
-      <div className="max-w-screen-xl flex flex-wrap self-center pt-4 px-4 pb-2 mb-5 mx-auto">
+      <div className="max-w-screen-xl flex flex-wrap self-center pt-4 px-4 pb-2 mb-1 mx-auto">
         <Link className="mx-5 space-x-3 rtl:space-x-reverse" to="/">
           <img
             src="https://res.cloudinary.com/dlbhhobaw/image/upload/v1717685535/Nav-Terror-Logo_nmhanx.png"
@@ -92,7 +92,7 @@ function Navbar() {
               <div className="flex flex-row">
                 <button
                   type="button"
-                  className="self-center p-2 px-3 m-2 rounded-lg hover:bg-red-700 hover:text-white text-base flex flex-wrap gap-2"
+                  className="self-center p-2 m-2 border border-black rounded-lg hover:bg-black hover:text-white text-base flex flex-row gap-2"
                   onClick={logout}
                 >
                   Logout
