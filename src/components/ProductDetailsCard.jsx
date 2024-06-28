@@ -23,13 +23,10 @@ function ProductDetailsCard({ product }) {
           <span className="text-3xl font-bold text-gray-900 dark:text-white">
             ${product.price} <br />
           </span>
+          Qty: <GenerateScoreLabel quantity={product.quantity} />
         </p>
-        {!user && user.isAdmin && (
+        {user && user.isAdmin && (
           <div>
-            <span className="p-5">
-              {" "}
-              Qty: <GenerateScoreLabel quantity={product.quantity} />
-            </span>
             <button
               className="mt-5 mr-5 text-white bg-black hover:bg-gray-200 hover:text-black border border-black focus:ring-4 focus:outline-none focus:ring-yellow-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-black dark:hover:bg-black dark:focus:ring-black"
               onClick={() => setToggleEdit(!toggleEdit)}
