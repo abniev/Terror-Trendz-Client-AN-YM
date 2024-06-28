@@ -73,7 +73,10 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="hover:underline">
+                  <a
+                    href="https://res.cloudinary.com/dzwbcfmbe/image/upload/v1719595258/76f5c66a13c7c0eda21ed6c4559f72c807c056d4c39dba410bc3681e773a7ecc._RI_V_TTW__r4arxs.png"
+                    class="hover:underline"
+                  >
                     Terms &amp; Conditions
                   </a>
                 </li>
