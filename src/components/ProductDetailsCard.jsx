@@ -26,7 +26,7 @@ function ProductDetailsCard({ product }) {
         </p>
         {user && user.isAdmin && (
           <div>
-            <span>
+            <span className="p-5">
               {" "}
               Qty: <GenerateScoreLabel quantity={product.quantity} />
             </span>
