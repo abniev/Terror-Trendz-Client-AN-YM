@@ -61,7 +61,7 @@ function Homepage() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="cutOut pt-2">
+          <div className="cutOut">
             <img
               src="https://res.cloudinary.com/dzwbcfmbe/image/upload/v1719420329/t3_z9rluy.jpg"
               alt="Terror-2-IMG"
@@ -69,7 +69,7 @@ function Homepage() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="cutOut pt-2">
+          <div className="cutOut">
             <img
               src="https://res.cloudinary.com/dzwbcfmbe/image/upload/v1719420294/t5_z1kbqz.jpg"
               alt="Terror-2-IMG"
