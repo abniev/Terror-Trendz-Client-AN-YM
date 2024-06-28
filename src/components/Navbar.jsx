@@ -19,7 +19,7 @@ function Navbar() {
           type="button"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden hover:bg-transparent  hover:border border-green-500 focus:outline-none focus:ring-2 focus:ring-black dark:text-black dark:hover:bg-yellow-400 dark:focus:ring-black"
           aria-controls="navbar-default"
-          aria-expanded="false"
+          aria-expanded="true"
         >
           <span className="sr-only">Open main menu</span>
           <svg
