@@ -20,8 +20,8 @@ function VideoPlayer() {
       {videoList && (
         <ReactPlayer url={videoList.videoUrl} controls muted playing />
       )}
-      <CreateVideoForm />
-      <div></div>
+      {user && user.isAdmin && <CreateVideoForm />}
+
       {music ? (
         music.map((music) => (
           <div
