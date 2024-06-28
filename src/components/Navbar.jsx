@@ -5,7 +5,7 @@ import { AuthContext } from "../context/auth.context";
 function Navbar() {
   const { user, logout } = useContext(AuthContext);
   return (
-    <nav className="font-sophisto text-2xl bg-yellow-400 border-gray-200 dark:bg-gray-900 flex flex-row ">
+    <nav className="font-sophisto text-2xl bg-yellow-400 border-gray-200 dark:bg-gray-900 flex flex-row mb-5">
       <div className="max-w-screen-xl flex flex-wrap self-center pt-2 pb-2 mx-auto">
         <Link className="mx-2" to="/">
           <img
