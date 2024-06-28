@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -67,7 +66,7 @@ function Footer() {
               <ul class="text-gray-700 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                   <a
-                    href="#https://s3.amazonaws.com/rails-camp-tutorials/blog/programming+memes/programming-or-googling.jpg"
+                    href="https://s3.amazonaws.com/rails-camp-tutorials/blog/programming+memes/programming-or-googling.jpg"
                     class="hover:underline"
                   >
                     Privacy Policy

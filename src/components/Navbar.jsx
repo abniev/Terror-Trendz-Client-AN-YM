@@ -42,21 +42,21 @@ function Navbar() {
           <div className="flex md:order-2 space-x-3 md:space-x-0">
             <div className="flex flex-row">
               <Link
-                className="block p-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="p-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page"
                 to="/product"
               >
                 Products
               </Link>
               <Link
-                className="block p-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="p-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
                 to="/music"
                 aria-current="page"
               >
                 Music
               </Link>
               <Link
-                className="block p-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="p-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-500 md:p-5 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-green-500 dark:hover:text-white md:dark:hover:bg-transparent"
                 to="/about"
               >
                 About
