@@ -92,7 +92,7 @@ function Navbar() {
               <div className="flex flex-row">
                 <button
                   type="button"
-                  className="self-center p-2 m-2 border border-black rounded-lg hover:bg-red hover:text-white text-base flex flex-row gap-2"
+                  className="self-center p-2 m-2 border border-black rounded-lg hover:bg-red-700 hover:text-white text-base flex flex-row gap-2"
                   onClick={logout}
                 >
                   Logout
