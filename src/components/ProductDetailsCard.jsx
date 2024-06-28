@@ -24,7 +24,7 @@ function ProductDetailsCard({ product }) {
             ${product.price} <br />
           </span>
         </p>
-        {user && user.isAdmin && (
+        {!user && user.isAdmin && (
           <div>
             <span className="p-5">
               {" "}
